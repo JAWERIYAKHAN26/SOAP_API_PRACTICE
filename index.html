@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SOAP API Practice — All Services</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>SOAP API Practice</h1>
+    <p>Calculator • Country Info • Temperature Convert • Number → Words</p>
+  </header>
+
+  <main>
+    <!-- Calculator -->
+    <section class="card" id="calculator">
+      <h2>Calculator (dneonline)</h2>
+      <div class="row">
+        <input id="calc-num1" type="number" placeholder="First number (int)" />
+        <input id="calc-num2" type="number" placeholder="Second number (int)" />
+      </div>
+      <div class="row">
+        <select id="calc-op">
+          <option value="Add">Add (+)</option>
+          <option value="Subtract">Subtract (-)</option>
+          <option value="Multiply">Multiply (×)</option>
+          <option value="Divide">Divide (÷)</option>
+        </select>
+        <button id="calc-btn">Calculate</button>
+      </div>
+      <div class="result" id="calc-result">Result: --</div>
+    </section>
+
+    <!-- Country Info -->
+    <section class="card" id="country">
+      <h2>Country Info (oorsprong)</h2>
+      <div class="row">
+        <input id="country-name" type="text" placeholder="Enter country name (e.g. Pakistan / United States)" />
+        <button id="country-btn">Search</button>
+      </div>
+      <div id="country-output" class="country-output">
+        <!-- results will be injected here -->
+      </div>
+    </section>
+
+    <!-- Temperature Conversion -->
+    <section class="card" id="temp">
+      <h2>Temperature Conversion (W3Schools)</h2>
+      <div class="row">
+        <input id="temp-val" type="text" placeholder="Temperature value (e.g. 100)" />
+        <select id="temp-dir">
+          <option value="CtoF">Celsius → Fahrenheit</option>
+          <option value="FtoC">Fahrenheit → Celsius</option>
+        </select>
+        <button id="temp-btn">Convert</button>
+      </div>
+      <div class="result" id="temp-result">Result: --</div>
+    </section>
+
+    <!-- Number to Words -->
+    <section class="card" id="numwords">
+      <h2>Number → Words (dataaccess)</h2>
+      <div class="row">
+        <input id="num-input" type="text" placeholder="Enter a number (e.g. 12345)" />
+        <select id="num-mode">
+          <option value="NumberToWords">NumberToWords</option>
+          <option value="NumberToDollars">NumberToDollars</option>
+        </select>
+        <button id="num-btn">Convert</button>
+      </div>
+      <div class="result" id="num-result">Result: --</div>
+    </section>
+
+    <section class="note card">
+      <h3>Notes / Troubleshooting</h3>
+      <ul>
+        <li>This project now calls the APIs directly — no local proxy needed.</li>
+        <li>If a request fails, check browser console for CORS errors.</li>
+        <li>For APIs without CORS support, you’ll need a server-side relay or run with disabled CORS in testing.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <small>Built for practice — SOAP requests sent directly to the services.</small>
+  </footer>
+
+  <!-- Script will run only after DOM is fully loaded -->
+  
+   <!-- Load script after all HTML so elements exist -->
+  <script src="script.js" defer></script>
+
+
+</body>
+</html>
