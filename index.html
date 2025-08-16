@@ -443,7 +443,7 @@ async function getCountryInfo(code) {
     name: getTagValue(xml, "sName") || "Unknown",
     capital: getTagValue(xml, "sCapitalCity") || "Unknown",
     currency: getTagValue(xml, "sCurrencyISOCode") || "Unknown",
-    flag: getTagValue(xml, "sCountryFlag") || ""
+  
   };
 }
 
@@ -516,7 +516,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <p><strong>Country:</strong> ${info.name}</p>
         <p><strong>Capital:</strong> ${info.capital}</p>
         <p><strong>Currency:</strong> ${info.currency}</p>
-        <img src="${info.flag}" alt="Flag">
+       
       `;
     }
   };
